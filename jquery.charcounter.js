@@ -5,9 +5,10 @@
             limit: 140,
             warning: 15,
             warningClass: 'label-warning',
-            exceededClass: 'labe-important',
+            exceededClass: 'label-important',
             defaultClass: 'label-info',
             notAllowOverflow: true,
+            fontSize: '1.4em',
         };
 
     function Charcounter( element, options ) 
@@ -32,18 +33,19 @@
         
         if (self.data('warning')) that.options.limit = self.data('warning');
 
-        self.parent().append($('<p />')
+        self.after($('<p />')
             .css({
                 //'width': width,
                 //'text-align': 'right',
                 //'margin-top': '10px',
                 //'color': this.options.defaultColor,
-                'font-size': '1.2em',
                 'position':'relative',
-                'top':'2px',
-                'display':'inline'
+                'top':'-1px',
+                'left':'5px',
+                'display':'inline',
+                
             })
-            .html($('<span />', {'class': 'label char-counter', 'html': this.options.limit}).addClass(this.options.defaultClass))
+            .html($('<span />', {'class': 'label char-counter', 'html': this.options.limit}).addClass(this.options.defaultClass).css('font-size',this.options.fontSize))
         );
         
         self.on('charcounter.recount keyup change focus blur', function(e) {
