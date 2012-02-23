@@ -30,10 +30,11 @@
 
   </head>
 
-<body>
-  <a href="https://github.com/adobi/jquery.charcounter"><img style="position: absolute; top: 0; right: 0; border: 0;" src="http://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png" alt="Fork me on GitHub" /></a>
+  <body>
 
-  <div class="container">
+
+    <div class="container">
+
       <!-- Main hero unit for a primary marketing message or call to action -->
       <div class="hero-unit">
         <h1>jquery.charcounter</h1>
@@ -53,7 +54,7 @@
           </div>
           <br>
           <h6>Markup</h6>
-          <pre class="prettyprint linenums">&lt;input type="text" data-countable="1" data-limit="100"&gt; </pre>
+          <pre class="prettyprint linenums"><?php echo htmlspecialchars('<input type="text" data-countable="1" data-limit="100">') ?> </pre>
         </div>
         <div class="span12">
           <h3><code>textarea</code></h3>
@@ -63,7 +64,7 @@
           </div>
           <br>
           <h6>Markup</h6>
-          <pre class="prettyprint linenums">&lt;textarea rows="5" data-countable="1" data-limit="20"&gt;&lt;/textarea&gt; </pre>
+          <pre class="prettyprint linenums"><?php echo htmlspecialchars('<textarea rows="5" data-countable="1" data-limit="20"></textarea>') ?> </pre>
           
        </div>
        <div class="span12">
@@ -78,32 +79,15 @@ $('[data-countable]').charcounter({
   defaultClass: 'label-info',
   notAllowOverflow: true,
   fontSize: '1.4em',
-})</pre>         
+})
+           </pre>         
        </div>
       </div>
 
       <hr>
 
       <footer>
-        
-        <h2>
-          Download
-          <p class="pull-right" style="text-align:right"><strong><a href="http://twitter.com/adobi">@adobi</a></strong></p>
-        </h2>
-        <div class="download">
-          <a href="https://github.com/adobi/jquery.charcounter/zipball/master">
-            <img border="0" width="90" src="https://github.com/images/modules/download/zip.png"></a>
-          <a href="https://github.com/adobi/jquery.charcounter/tarball/master">
-            <img border="0" width="90" src="https://github.com/images/modules/download/tar.png"></a>
-        </div>
-        <p>
-          <pre>$ git clone git://github.com/adobi/jquery.charcounter</pre>
-        </p>
-    
-        <div>
-          or get the source code on <a href="https://github.com/adobi/jquery.charcounter">GitHub</a>
-        </div>
-
+        <p style="text-align:right"><strong><a href="http://twitter.com/adobi">@adobi</a></strong></p>
       </footer>
 
     </div> <!-- /container -->
