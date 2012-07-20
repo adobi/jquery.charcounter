@@ -31,7 +31,7 @@
            
         if (self.data('limit')) that.options.limit = self.data('limit');
         
-        if (self.data('warning')) that.options.limit = self.data('warning');
+        if (self.data('warning')) that.options.warning = self.data('warning');
 
         self.after($('<p />')
             .css({
